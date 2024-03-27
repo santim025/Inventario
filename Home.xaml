@@ -1,0 +1,151 @@
+﻿<Window x:Class="Iluminacion.Home"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iluminacion"
+        mc:Ignorable="d"
+        Title="Home" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Border CornerRadius="8" Background="White">
+
+        <Grid x:Name="Principal" Background="Transparent">
+
+            <!--#REGION Header-->
+            <Grid x:Name="Header" Height="20" VerticalAlignment="Top" Background="Transparent" >
+                <Border CornerRadius="8,8,0,0" Background="#7e7c7c" />
+
+                <!--#region Botones Header-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--#region BtnCerrar-->
+                    <materialDesign:PackIcon Kind="WindowClose" Grid.Column="2" Height="20" Width="20" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" x:Name="Btn_Cerrar" Cursor="Hand" Foreground="#E60003" ToolTip="Cerrar" MouseDown="btn_cerrar"/>
+                    <!--#endregion-->
+
+                    <!--#region BtnMinizar-->
+                    <materialDesign:PackIcon Kind="WindowMinimize" Grid.Column="2" Height="20" Width="20" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" x:Name="Btn_Minimizar" Cursor="Hand" Foreground="GhostWhite" ToolTip="Minimizar" MouseDown="Btn_minimizar"/>
+                    <!--#endregion-->
+
+                </Grid>
+                <!--#endregion-->
+
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Contenido-->
+
+            <Grid x:Name="GridContent" Background="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="579" Width="950" PreviewMouseLeftButtonDown="PMLBDown">
+
+                <Border CornerRadius="0,0,0,10" Background="GhostWhite"/>
+                <Image Source="bulbo.png" Width="140" />
+
+            </Grid>
+
+            <!--#endregion-->
+
+            <!--#region SlideBar-->
+
+            <Grid x:Name="GridMenu" Background="Transparent" Width="50" HorizontalAlignment="Left" Margin="0,20,0,0">
+
+                <Border Background="#cdcdcd" CornerRadius="0,0,0,10" />
+
+                <!--#region Menu-->
+
+                <StackPanel Background="Transparent" VerticalAlignment="Top">
+
+                    <!--#region ShowMenu-->
+
+                    <Grid Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
+
+                        <ToggleButton x:Name="BtnShowHide" Width="40" Height="30" BorderBrush="#7e7c7c" Background="#7e7c7c" Checked="TBShow" Unchecked="TBHide">
+
+                            <ToggleButton.Triggers>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                    <BeginStoryboard>
+                                        <Storyboard x:Name="HidePanel">
+                                            <DoubleAnimation Storyboard.TargetName="GridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="50" Duration="0:0:0:0.5"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                    <BeginStoryboard >
+                                        <Storyboard x:Name="ShowPanel">
+                                            <DoubleAnimation Storyboard.TargetName="GridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="75" To="200" Duration="0:0:0:0.5"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+
+                            </ToggleButton.Triggers>
+
+                        </ToggleButton>
+
+
+
+                    </Grid>
+
+                    <!--#endregion-->
+
+                    <!--#region Lista-->
+
+                    <ListView Background="Transparent" BorderBrush="Transparent" Margin="0,30,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <!--#region Inicio-->
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Foreground="SlateGray" Kind="CashRegister" Height="40" Width="40" VerticalAlignment="Center" Grid.Column="0" />
+                            <TextBlock Text="Ganancias" Style="{StaticResource BebasNeue}" VerticalAlignment="Center" Grid.Column="1" Margin="10,0,0,0" FontSize="25"/>
+                        </Grid>
+
+                        <!--#endregion-->
+
+                    </ListView>
+
+                    <ListView Background="Transparent" BorderBrush="Transparent" Margin="0,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <!--#region Inicio-->
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="Store" Foreground="SlateGray" Height="40" Width="40" VerticalAlignment="Center" Grid.Column="0" />
+                            <TextBlock Text="Productos" Style="{StaticResource BebasNeue}" VerticalAlignment="Center" Grid.Column="1" Margin="10,0,0,0" FontSize="25" />
+                        </Grid>
+
+                        <!--#endregion-->
+
+                    </ListView>
+
+                    <!--#endregion-->
+
+                </StackPanel>
+
+                <!--#endregion-->
+
+            </Grid>
+
+            <!--#endregion-->
+
+        </Grid>
+
+    </Border>
+
+</Window>

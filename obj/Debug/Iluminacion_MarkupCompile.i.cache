@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Projects\Iluminacion\obj\Debug\
+C:\Projects\Inventario\obj\Debug\
 Iluminacion
 none
 false
 DEBUG;TRACE
-C:\Projects\Iluminacion\App.xaml
-1219584333
+C:\Projects\Inventario\App.xaml
+2-1798083302
 
-6-502434485
-161630778461
-MainWindow.xaml;
+7-206224138
+16306921122
+Home.xaml;Login.xaml;
 
-True
+False
 
