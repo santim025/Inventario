@@ -4,13 +4,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Iluminacion"
+        xmlns:local="clr-namespace:Iluminacion" 
+        xmlns:viewmodels="clr-namespace:Iluminacion.Views"
         mc:Ignorable="d"
         Title="Home" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
+
+    <Window.Resources>
+        <DataTemplate x:Name="Productos" DataType="{x:Type viewmodels:ProductView}">
+            <viewmodels:ProductView DataContext="{Binding}"/>
+
+        </DataTemplate>
+    </Window.Resources>
 
     <Border CornerRadius="8" Background="White">
 
@@ -49,6 +57,7 @@
 
                 <Border CornerRadius="0,0,0,10" Background="GhostWhite"/>
                 <Image Source="bulbo.png" Width="140" />
+                <ContentControl Content="{Binding}"/>
 
             </Grid>
 
@@ -117,11 +126,11 @@
 
                     </ListView>
 
-                    <ListView Background="Transparent" BorderBrush="Transparent" Margin="0,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListView Background="Transparent" BorderBrush="Transparent" Margin="0,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDown="ProductViewClick">
 
                         <!--#region Inicio-->
 
-                        <Grid>
+                        <Grid MouseDown="ProductViewClick">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />

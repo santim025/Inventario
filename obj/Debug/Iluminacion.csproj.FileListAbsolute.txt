@@ -35,10 +35,17 @@ C:\Projects\Inventario\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Projects\Inventario\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Projects\Inventario\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Projects\Inventario\obj\Debug\Iluminacion.csproj.AssemblyReference.cache
+C:\Projects\Inventario\obj\Debug\Home.g.cs
+C:\Projects\Inventario\obj\Debug\Login.g.cs
+C:\Projects\Inventario\obj\Debug\Views\ProductView.g.cs
 C:\Projects\Inventario\obj\Debug\App.g.cs
+C:\Projects\Inventario\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Projects\Inventario\obj\Debug\Iluminacion_MarkupCompile.cache
 C:\Projects\Inventario\obj\Debug\Iluminacion_MarkupCompile.lref
 C:\Projects\Inventario\obj\Debug\App.baml
+C:\Projects\Inventario\obj\Debug\Home.baml
+C:\Projects\Inventario\obj\Debug\Login.baml
+C:\Projects\Inventario\obj\Debug\Views\ProductView.baml
 C:\Projects\Inventario\obj\Debug\Iluminacion.g.resources
 C:\Projects\Inventario\obj\Debug\Iluminacion.Properties.Resources.resources
 C:\Projects\Inventario\obj\Debug\Iluminacion.csproj.GenerateResource.cache
@@ -46,7 +53,3 @@ C:\Projects\Inventario\obj\Debug\Iluminacion.csproj.CoreCompileInputs.cache
 C:\Projects\Inventario\obj\Debug\Iluminacion.csproj.CopyComplete
 C:\Projects\Inventario\obj\Debug\Iluminacion.exe
 C:\Projects\Inventario\obj\Debug\Iluminacion.pdb
-C:\Projects\Inventario\obj\Debug\Home.g.cs
-C:\Projects\Inventario\obj\Debug\Login.g.cs
-C:\Projects\Inventario\obj\Debug\Login.baml
-C:\Projects\Inventario\obj\Debug\Home.baml

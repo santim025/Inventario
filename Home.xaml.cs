@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Iluminacion.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,11 @@ namespace Iluminacion
         private void TBHide(object sender, RoutedEventArgs e)
         {
             GridContent.Opacity = 1;
+        }
+
+        private void ProductViewClick(object sender, MouseButtonEventArgs e)
+        {
+            DataContext = new ProductView();
         }
     }
 }
